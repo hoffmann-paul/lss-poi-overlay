@@ -3,6 +3,8 @@ import json
 
 def get_API_list():
     global response
+    global keywords_list
+
     file = open("keywords.json", "r")
     keywords_list = json.loads(file.read())
 
@@ -55,4 +57,5 @@ def get_coordinates():
     return response_answer
 
 def server_request():
-    return pins
+    get_API_list()
+    return get_coordinates()
