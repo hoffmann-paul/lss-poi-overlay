@@ -19,7 +19,6 @@
     {"label": "Eisenbahntunnel", "osm-key": "tunnel", "osm-tag": "yes"},
     {"label": "Eishalle", "osm-key": "leisure", "osm-tag": "ice_rink"},
     {"label": "Festplatz", "osm-key": "amenity", "osm-tag": "festival_grounds"},
-    {"label": "Flughafen (groß): Parkhaus", "osm-key": "amenity", "osm-tag": "parking"},
     {"label": "Flughafen (groß): Start-/Landebahn", "osm-key": "aeroway", "osm-tag": "runway"},
     {"label": "Flughafen (groß): Terminal", "osm-key": "aeroway", "osm-tag": "terminal"},
     {"label": "Flughafen (groß): Vorfeld / Standplätze", "osm-key": "aeroway", "osm-tag": "apron"},
