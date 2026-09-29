@@ -1,0 +1,22 @@
+{
+  "manifest_version": 3,
+  "name": "lss-poi-overlay",
+  "version": "1.0",
+  "host_permissions": ["http://127.0.0.1:8765/*"],
+  "background": {
+    "service_worker": "background.js"
+  },
+  "content_scripts": [
+    {
+      "matches": ["*://www.openstreetmap.org/*"],
+      "js": ["bridge.js"],
+      "run_at": "document_start"
+    },
+    {
+      "matches": ["*://www.openstreetmap.org/*"],
+      "js": ["content.js"],
+      "run_at": "document_start",
+      "world": "MAIN"
+    }
+  ]
+}
