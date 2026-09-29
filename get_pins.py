@@ -14,7 +14,7 @@ def get_API_list():
             string += f'nwr["{i['osm-key']}"="{i['osm-tag']}"](area.a); '
         return string
 
-    city = input("Enter City for Search: ")
+    city = "Backnang"
 
     data = format_keyword_list()
 
