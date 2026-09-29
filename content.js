@@ -1,4 +1,3 @@
-// Pins über die Brücke anfordern
 function requestPins() {
   return new Promise((resolve) => {
     const id = Math.random().toString(36).slice(2);
@@ -13,7 +12,6 @@ function requestPins() {
   });
 }
 
-// Pins auf die Karte setzen
 async function addPins(map) {
   const pins = await requestPins();
   const icon = L.divIcon({
@@ -26,7 +24,6 @@ async function addPins(map) {
   });
 }
 
-// In Leaflet einhängen: wird für jede neue Karte aufgerufen
 function hookLeaflet(L) {
   if (L.__pinsHooked) return;
   L.__pinsHooked = true;
@@ -36,7 +33,6 @@ function hookLeaflet(L) {
   });
 }
 
-// Auf Leaflet warten, falls es noch nicht geladen ist
 if (window.L && window.L.Map) {
   hookLeaflet(window.L);
 } else {
