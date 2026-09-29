@@ -17,6 +17,17 @@
       "js": ["content.js"],
       "run_at": "document_start",
       "world": "MAIN"
+    },
+    {
+      "matches": ["*://www.leitstellenspiel.de/*"],
+      "js": ["bridge.js"],
+      "run_at": "document_start"
+    },
+    {
+      "matches": ["*://www.leitstellenspiel.de/*"],
+      "js": ["content.js"],
+      "run_at": "document_start",
+      "world": "MAIN"
     }
   ]
 }
