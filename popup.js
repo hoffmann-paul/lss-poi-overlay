@@ -1,6 +1,5 @@
 document.getElementById("button").addEventListener("click", () => {
-    const name = document.getElementById("name").value;
+    const frontend_city = document.getElementById("city").value;
 
-    document.getElementById("output").textContent =
-        "Hallo " + name + "!";
+    
 });
