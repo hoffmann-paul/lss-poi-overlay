@@ -1,6 +1,8 @@
 import requests
 import json
 
+email = ""
+
 def get_API_list(city):
     global response
     global keywords_list
@@ -26,7 +28,7 @@ def get_API_list(city):
     """
 
     headers = {
-        "User-Agent": "lss-poi-overlay/1.0 (paulhoffmann410@gmail.com)",
+        "User-Agent": f"lss-poi-overlay/1.0 ({email})",
         "Accept": "application/json",
     }
 
