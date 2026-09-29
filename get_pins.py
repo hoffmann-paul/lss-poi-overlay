@@ -1,7 +1,7 @@
 import requests
 import json
 
-def get_API_list():
+def get_API_list(city):
     global response
     global keywords_list
 
@@ -13,8 +13,6 @@ def get_API_list():
         for i in keywords_list:
             string += f'nwr["{i['osm-key']}"="{i['osm-tag']}"](area.a); '
         return string
-
-    city = "Backnang"
 
     data = format_keyword_list()
 
@@ -56,6 +54,6 @@ def get_coordinates():
         response_answer.append({"lat": float(lat_raw), "lng": float(lng_raw), "label": label})
     return response_answer
 
-def server_request():
-    get_API_list()
+def server_request(city):
+    get_API_list(city)
     return get_coordinates()
