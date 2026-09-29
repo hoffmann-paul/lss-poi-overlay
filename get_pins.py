@@ -1,17 +1,28 @@
 import requests
+import json
+
+# JSON string to Python objec
+file = open("keywords.json", "r")
+keywords_list = json.loads(file.read())
+
+def format_keyword_list():
+    string = ""
+    for i in keywords_list:
+        string += f'nwr["{i['osm-key']}"="{i['osm-tag']}"](area.a); '
+    return string
 
 city = input("Enter City for Search: ")
+
+data = format_keyword_list()
 
 query = f"""
 [out:json][timeout:25];
 area["name"="{city}"]["boundary"="administrative"]->.a;
 (
-  nwr["amenity"="school"](area.a);
+  {data}
 );
 out center;
 """
-
-import requests
 
 headers = {
     "User-Agent": "lss-poi-overlay/1.0 (paulhoffmann410@gmail.com)",
